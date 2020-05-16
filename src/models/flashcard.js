@@ -14,7 +14,7 @@ const flashcardSchema = new Schema({
     required: true,
     ref: 'User'
   },
-  flashcardsets: [{
+  flashcardset: [{
     cardQuestion: {
       type: String,
     },
