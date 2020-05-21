@@ -76,7 +76,7 @@ router.patch('/flashcards/:id', auth, async (req, res) => {
   const updates = Object.keys(req.body) 
   const allowedUpdates = [
     'title',
-    'flashcardsets',
+    'flashcardset',
     'tags','cardQuestion',
     'cardAnswer']
   const isValidOperation = updates.every((update) => allowedUpdates.includes(update))
@@ -127,7 +127,7 @@ router.patch('/addflashcard/:id', auth, async (req, res) => {
       return res.status(404).send() 
     }
 
-    flashcard.flashcardsets.push({
+    flashcard.flashcardset.push({
       cardQuestion: req.body.cardQuestion,
       cardAnswer: req.body.cardAnswer
     })
