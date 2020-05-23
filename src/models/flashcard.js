@@ -9,6 +9,9 @@ const flashcardSchema = new Schema({
     required: true,
     trim: true,
   },
+  description: {
+    type: String
+  },
   createdBy: {
     type: mongoose.Schema.Types.ObjectId,
     required: true,
